@@ -34,13 +34,16 @@
   <div id="gameSection" style="display:none;">
     <h1>Gioco - Cards Against Humanity</h1>
     <p id="roomIdDisplay"></p>
-    <!-- Pulsante Avvia Gioco -->
-    <button id="startGameBtn">Avvia Gioco</button>
-    <!-- Timer -->
+    <!-- Pulsante Avvia Gioco: visibile solo all'host -->
+    <button id="startGameBtn" style="display:none;">Avvia Gioco</button>
+    <!-- Div per il timer -->
     <div id="timer"></div>
-    <!-- Area per le richieste di ingresso (solo per l'host) -->
+    <!-- Lista delle richieste di ingresso (per l'host) -->
     <div id="pendingList" style="display:none;"></div>
+    <!-- Area per il gioco (carte, round, etc.) -->
     <div id="gameArea"></div>
+    <!-- Lista dei giocatori approvati (per l'host) -->
+    <div id="approvedList" style="display:none;"></div>
   </div>
 
   <script src="/socket.io/socket.io.js"></script>

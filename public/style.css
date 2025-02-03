@@ -1,91 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  #registrationSection, #roomSection, #gameSection {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    margin: 5px;
-    width: 80%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 4px;
-    background: #007BFF;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
-  .black-card {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    margin: 10px auto;
-    font-size: 1.2em;
-    width: 80%;
-    border-radius: 8px;
-  }
-  
-  .white-card {
-    background: #fff;
-    color: #000;
-    padding: 15px;
-    margin: 10px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 200px;
-    display: inline-block;
-  }
-  
-  .hand {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .submissions {
-    margin-top: 20px;
-  }
-  
-  /* Evidenzia l'elemento selezionato */
-  .selected {
-    border-color: #28a745;
-    background: #e6ffe6;
-  }
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
 
-#pendingList {
-    margin-top: 20px;
-    padding: 10px;
-    border: 2px dashed #007BFF;
-    background: #f9f9f9;
+h1, h2, h3 {
+  color: #333;
+}
+
+#registrationSection, #roomSection, #gameSection {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 5px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  background: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.black-card {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  margin: 10px auto;
+  font-size: 1.2em;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.white-card {
+  background: #fff;
+  color: #000;
+  padding: 15px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 200px;
+  display: inline-block;
+  text-align: center;
+}
+
+.hand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.submissions, #pendingList, #approvedList {
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px dashed #007BFF;
+  background: #f9f9f9;
+}
+
+.selected {
+  border-color: #28a745;
+  background: #e6ffe6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .white-card {
+    width: 45%;
+    margin: 5px;
   }
-  
-  #pendingList h3 {
-    margin-top: 0;
+}
+
+@media (max-width: 480px) {
+  .white-card {
+    width: 90%;
+    margin: 5px auto;
   }
+}
