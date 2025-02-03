@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Cards Against Humanity - Italian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sezione di Registrazione -->
+  <div id="registrationSection">
+    <h1>Registrazione</h1>
+    <form id="registrationForm">
+      <input type="text" id="usernameInput" placeholder="Inserisci il tuo nome" required>
+      <button type="submit">Registrati</button>
+    </form>
+  </div>
+
+  <!-- Sezione per Creare/Unirsi in Stanza -->
+  <div id="roomSection" style="display:none;">
+    <h1>Stanza di gioco</h1>
+    <form id="createRoomForm">
+      <input type="text" id="roomNameInput" placeholder="Nome stanza" required>
+      <button type="submit">Crea Stanza</button>
+    </form>
+    <br>
+    <form id="joinRoomForm">
+      <input type="text" id="joinRoomInput" placeholder="ID Stanza" required>
+      <button type="submit">Entra in Stanza</button>
+    </form>
+    <div id="roomPlayers"></div>
+  </div>
+
+  <!-- Sezione di Gioco -->
+  <div id="gameSection" style="display:none;">
+    <h1>Gioco - Cards Against Humanity</h1>
+    <p id="roomIdDisplay"></p>
+    <!-- Pulsante Avvia Gioco -->
+    <button id="startGameBtn">Avvia Gioco</button>
+    <!-- Timer -->
+    <div id="timer"></div>
+    <!-- Area per le richieste di ingresso (solo per l'host) -->
+    <div id="pendingList" style="display:none;"></div>
+    <div id="gameArea"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
