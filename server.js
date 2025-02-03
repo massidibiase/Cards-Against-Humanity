@@ -322,6 +322,7 @@ function startRound(roomId) {
   }, roundDuration * 1000);
 }
 
-http.listen(3000, () => {
-  console.log('DEBUG: Server in ascolto sulla porta 3000');
+const port = process.env.PORT || 3000;
+http.listen(port, () => {
+  console.log(`DEBUG: Server in ascolto sulla porta ${port}`);
 });
